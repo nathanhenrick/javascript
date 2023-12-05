@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+    <style>
+        h2 {
+            text-align: center;
+            background-color: rgb(0, 0, 0);
+            color: whitesmoke;
+            border-radius: 10px;
+            padding: 10px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+
+
+    <script>
+        var nome = window.prompt('Qual o seu nome?')
+        var leitura = nome.replace(' ', '')
+
+        document.write(`<h2>Prazer, ${nome}, sabia que seu nome tem ${leitura.length} letras?</h2>`)
+
+
+        var n1 = Number(window.prompt('Digite um número: ')) 
+        var n2 = Number(window.prompt('Digite outro número: '))
+        var soma = n1 + n2
+        document.write(nome.toUpperCase() + ', quando se soma os dois valores inseridos, a resposta é ' + soma + '. Porém, quando é apenas pra juntar os valores, fica ' + n1.toString() + ' e ' + n2.toString())
+
+
+
+    </script>
+    
+</body>
+</html>
