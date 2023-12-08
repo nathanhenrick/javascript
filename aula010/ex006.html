@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+    main.container {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+
+    }
+
+    h1 {
+        line-height: 200px;
+        font-size: 1.3em;
+        
+
+        background-color: goldenrod;
+        color: lightgoldenrodyellow;
+        padding: 10px;
+        width: 200px;
+        height: 200px;
+
+        border: 5px solid black;
+    }
+
+    </style>
+</head>
+<body>
+    <main class="container">
+        <h1 class="item" id="area" >Interaja</h1>
+    </main>
+
+    <script>
+        var area = window.document.getElementById('area');
+
+        area.addEventListener('click', clicar);
+        area.addEventListener('mouseenter', entrar);
+        area.addEventListener('mouseout', sair);
+
+        function clicar() {
+            var area = window.document.getElementById('area')
+            area.innerHTML='Clicou'
+
+            area.style.backgroundColor = 'black'
+            area.style.color = 'white'
+            area.style.border = '5px solid goldenrod'
+
+            area.style.transition = '0.3s'
+
+        }
+        function entrar() {
+            var area = window.document.getElementById('area')
+            area.innerHTML='Entrou'
+
+
+            area.style.backgroundColor = 'darkgreen'
+            area.style.color = 'white'
+            area.style.border = '5px solid lightgreen'
+
+            area.style.transition = '0.3s'
+
+        }
+
+        function sair () {
+            var area = window.document.getElementById('area')
+            area.innerHTML='Saiu'
+
+
+            area.style.backgroundColor = 'darkred'
+            area.style.color = 'black'
+            area.style.border = '5px solid black'
+
+            area.style.transition = '0.3s'
+        }
+
+    </script>
+</body>
+</html>
