@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Verificação de velocidade</h1>
+    <p>
+        A minha velocidade é de <input type="number" name="vel" id="ivel">
+        Km/h
+        <input type="button" value="Verificar" onclick="clicar()">
+    </p>
+    <div id="res"></div>
+
+    <script>
+        function clicar() {
+            let velocidade = document.getElementById('ivel')
+            let res = document.getElementById('res')
+            let conversao = Number(velocidade.value)
+
+            res.innerHTML = `A sua velocidade foi de <strong>${conversao}Km/h</strong>`
+            
+            if (conversao > 40) {
+                res.innerHTML += '<p>Você ultrapassou o limite de velocidade máximo da via.<strong> MULTADO</strong></p>'
+            } else{
+                null
+            }
+
+            res.innerHTML += `<p>Coloque o cinto de segurança e dirija com cuidado!</p>`
+            }
+        
+    </script>
+</body>
+</html>

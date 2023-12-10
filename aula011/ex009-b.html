@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site ex009</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Brasileiro ou estrangeiro?</h1>
+    <p>
+        Em qual país você nasceu?
+        <input type="text" name="pais" id="ipais">
+        <input type="button" value="Enviar" onclick="clicar()">
+
+        <div id="resposta"></div>
+
+    </p>    
+
+    <script>
+        function clicar(){
+            let pais = document.getElementById('ipais').value
+            let resposta = document.getElementById('resposta')
+            if (pais.toLowerCase() === 'brasil') {
+                resposta.innerHTML = "Você É BR, 'tamo junto"
+            } else {
+                resposta.innerHTML = `Você é gringo :(`
+            }
+        }
+    </script>
+</body>
+</html>
