@@ -1,7 +1,6 @@
 function load() {
     const date = new Date()
-    //let horaAtual = date.getHours()
-    let horaAtual = 15
+    let horaAtual = date.getHours()
 
     const msg = document.getElementById('msg')
     const img = document.getElementById('img')
